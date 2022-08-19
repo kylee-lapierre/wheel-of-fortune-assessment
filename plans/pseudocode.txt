@@ -1,0 +1,30 @@
+1) Start the game and prompt the user for player name (if have time)
+    (stored in a nested dictionary)
+
+2) After users are inputted, select a random word from dictionary and store in a list. Put random word in list of past words that is reset with every new game and on second and third rounds, compare random word to previous words to see if it has been used.
+    (stored in a list then chooses a word at random that is then stored in a previous words list and used to compare to rounds 2 and 3 to make sure the words aren't repeated)
+
+3) Choose someone at random to start then add to a round counter to keep track of rounds.
+    (utilize the random function to choose a random person, then at the end of the round, add 1 to the round counter. When round counter is equal to 2, enter the final round and choose the player with the most amount of money.)
+3) From three players, choose someone at random to start first round and add to the round counter to indicate the first round has started. (use the random setup from the word guessing game to choose a word and someone at random then add to the round counter to indicate when the third round starts instead of unlimited play)
+4) After choosing someone at random, display the amount of underscores (_) needed for each letter within said word then display whichever player starts and have them spin the wheel by entering a character. 
+5) Once the player spins the wheel, choose at random one slice out of 19 (money slice means they can either guess a consonant or a vowel, bankrupt means they lose all accumulated money (game total) and skips to the next person, and lose a turn means they don't get to guess and skips to the next person)
+6) If money slice is landed on, then the player gets to guess a consonant for free or buy a vowel for $250. This $250 gets subtracted from the round total and not the players game total.
+7) 
+8) 
+9) 
+10) 
+11) 
+12) 
+13) 
+14) 
+15) 
+
+code to get player with maximum game total:
+new_list = []
+for i in players:
+    new_list.append(players[i].get("gametotal"))
+for i in players:
+    if max(new_list) == players[i].get("gametotal"):
+        print(f"Max number: {new_list[i]}")
+        print(f"Name: {players[i].get('name')}")
