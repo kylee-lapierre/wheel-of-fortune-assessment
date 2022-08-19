@@ -1,4 +1,4 @@
-1) Start the game and prompt the user for player name (if have time)
+1) Start the game and prompt the user for player name (if have time) otherwise players are listed as player 1,2, or 3.
     (stored in a nested dictionary)
 
 2) After users are inputted, select a random word from dictionary and store in a list. Put random word in list of past words that is reset with every new game and on second and third rounds, compare random word to previous words to see if it has been used.
@@ -6,25 +6,35 @@
 
 3) Choose someone at random to start then add to a round counter to keep track of rounds.
     (utilize the random function to choose a random person, then at the end of the round, add 1 to the round counter. When round counter is equal to 2, enter the final round and choose the player with the most amount of money.)
-3) From three players, choose someone at random to start first round and add to the round counter to indicate the first round has started. (use the random setup from the word guessing game to choose a word and someone at random then add to the round counter to indicate when the third round starts instead of unlimited play)
-4) After choosing someone at random, display the amount of underscores (_) needed for each letter within said word then display whichever player starts and have them spin the wheel by entering a character. 
-5) Once the player spins the wheel, choose at random one slice out of 19 (money slice means they can either guess a consonant or a vowel, bankrupt means they lose all accumulated money (game total) and skips to the next person, and lose a turn means they don't get to guess and skips to the next person)
-6) If money slice is landed on, then the player gets to guess a consonant for free or buy a vowel for $250. This $250 gets subtracted from the round total and not the players game total.
-7) 
-8) 
-9) 
-10) 
-11) 
-12) 
-13) 
-14) 
-15) 
 
-code to get player with maximum game total:
-new_list = []
-for i in players:
-    new_list.append(players[i].get("gametotal"))
-for i in players:
-    if max(new_list) == players[i].get("gametotal"):
-        print(f"Max number: {new_list[i]}")
-        print(f"Name: {players[i].get('name')}")
+4) After choosing starting player, display the amount of underscores that are equal to the amount of letters within random word. 
+    (utilize "_"*len(random word) to get the exact amount of underscores for each word.)
+
+5) Then have the first player spin the wheel with an input.
+    (Prompt user to spin wheel for money amount, and have player guess either a consonant or buy a vowel for their turn.)
+
+6) If money slice is landed on, then have player guess a letter or buy a vowel for $250 with a prompt. The vowel money gets taken from the players round total not from their game total if they get the vowel right. If the vowel is wrong, it gets taken from their game total. If there are no more vowels in the word, print statement saying so (if have time).
+    (Utilize a while loop with if statements and for loops to check if the letter is in the random word and if it is, then the while loop resets with prompting the user for another wheel spin and letter guess. If the letter is not in the word, then no money gets added to the players round total and it goes to the next person.)
+
+7) Once the word is guessed, the round totals get added to the game totals and the round counter goes up by 1.
+    (update the round totals and game totals within players dictionary to include the money won (adding round total and game total together to equal the new game total) and setting round total back to zero. Reset the underscores back to the length of the newly chosen random word.)
+
+8) Once the round counter reaches the end of round 2 (when it will equal 3 on the next go around), then enter the final round and pick the player with the most game total "money" to play in the final round.
+    (utilize code below to get the maximum game total and the name of said player.
+    new_list = []
+    for i in players:
+        new_list.append(players[i].get("gametotal"))
+    for i in players:
+        if max(new_list) == players[i].get("gametotal"):
+            print(f"Max number: {new_list[i]}")
+            print(f"Name: {players[i].get('name')}")
+    )
+
+9) After the player with the most money is established, start the final round with a random word and display the number of underscores for the amount of letter within the word.
+    (Utilize code from (1) to compare final word to past words and make sure that the final word hasn't been used)
+
+10) Once the final word has been chosen, then fill in the letters for the final round and prompt the final player to choose three consonants and a vowel to try and guess the word. If the word is guessed, they win game prize ($5,000) and their game winnings. If the word is not guessed, they win only their game winnings. (if have time, make the final prize random and choose from a set of cash prizes ranging from $1,000 to $10,000)
+    (choose the final word then work through to see if R-S-T-L-N-E is in the final word, then display final word with letters filled in and prompt the user for 3 consonants and 1 vowel to aid in guessing. Give the player 5 seconds to answer and submit an answer; if they take longer than 5 seconds then still let them guess but let them know that they went overtime and if they guess in less time then let them know if their guess was correct and that they won the game prize or that they got it wrong and only won their game winnings.)
+
+
+display round totals at the end of each round for game totals and add round totals to each (round summary or round status)
