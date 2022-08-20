@@ -1,23 +1,23 @@
 # Dictionary file location, change if needed.
-dictionaryloc = 'Data-Txt-Files/dictionary.txt'
+dictionary_loc = 'Data-Txt-Files/dictionary.txt'
 
 # Turn text file location, change if needed.
-turntextloc = 'Data-Txt-Files/turntext.txt'
+turn_text_loc = 'Data-Txt-Files/turntext.txt'
 
 # Wheel contents for file location, change if needed.
-wheeltextloc = 'Data-Txt-Files/wheeldata.txt'
+wheel_text_loc = 'Data-Txt-Files/wheeldata.txt'
 
 # End of Round Status status file, change if needed.
-roundstatusloc = 'Data-Txt-Files/roundstatus.txt'
+round_status_loc = 'Data-Txt-Files/roundstatus.txt'
 
 # number of rounds in a game
-maxrounds = 3
+max_rounds = 3
 
 # Vowel cost
-vowelcost = 250
+vowel_cost = 250
 
 # final prize, you fill this in
-finalprize = "A brand new car!\nThis 2022 Ford Fusion Titanium comes full equipped with everything you could need!"
+final_prize = "A brand new car!\nThis 2022 Ford Fusion Titanium comes full equipped with everything you could need!"
 
 # final round, change if needed.
-finalRoundTextLoc = 'Data-Txt-Files/finalround.txt'
+final_round_text_loc = 'Data-Txt-Files/finalround.txt'
