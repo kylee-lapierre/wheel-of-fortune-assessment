@@ -23,11 +23,11 @@
     (utilize code below to get the maximum game total and the name of said player.
     new_list = []
     for i in players:
-        new_list.append(players[i].get("gametotal"))
+        new_list.append(players[i].get("Game Total"))
     for i in players:
-        if max(new_list) == players[i].get("gametotal"):
-            print(f"Max number: {new_list[i]}")
-            print(f"Name: {players[i].get('name')}")
+        if max(new_list) == players[i].get("Game Total"):
+            final_player_info = players[i]
+            final_player = players[i].get("Name")
     )
 
 9) After the player with the most money is established, start the final round with a random word and display the number of underscores for the amount of letter within the word.
@@ -38,3 +38,6 @@
 
 
 display round totals at the end of each round for game totals and add round totals to each (round summary or round status)
+
+
+source for bonus round phrases: https://www.kaggle.com/datasets/parrotypoisson/wheel-of-fortune-bonus-rounds
