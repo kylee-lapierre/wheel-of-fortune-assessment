@@ -1,19 +1,17 @@
 import random
+from config import dictionary_loc
+blank_word = []
+file = open(dictionary_loc, 'r')
+dictionary = file.read().splitlines()
+file.close()
+round_word = "hello"
+round_letters = list(enumerate(round_word))
+blank_word = list("_"*len(round_word))
+letter = 'l'
 
-players = {0:{"Round Total":0,"Game Total":0,"Name":""},
-         1:{"Round Total":0,"Game Total":0,"Name":""},
-         2:{"Round Total":0,"Game Total":0,"Name":""},
-        }
-
-for i in range(0,3):
-    players[i]["Round Total"] = 0
-    init_player = random.choice(list(players.keys()))
-
-print(init_player)
-
-for i in range(0,3):
-    print(players[i]["Round Total"])
-
-
-# 11,Lose a turn
-# 19,Bankrupt
+print(round_letters)
+for index, value in round_letters:
+    if letter in value:
+        blank_word.pop(index)
+        blank_word.insert(index, value)
+print(" ".join(blank_word))
