@@ -1,5 +1,7 @@
-FINAL ROUND INSTRUCTIONS
-========================
+{1}, you had the most money at the end of the two rounds! Congratulations!
+Here are the instructions for the final round.
+
+=============================================================================
 
 For the final round, there will be one word that hasn't been used yet.
 You are given the letters R, S, T, L, N, and E.
