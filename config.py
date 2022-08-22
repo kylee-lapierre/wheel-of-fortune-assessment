@@ -17,7 +17,7 @@ max_rounds = 3
 vowel_cost = 250
 
 # final prize, you fill this in
-final_prize = "A brand new car!\nThis 2022 Ford Fusion Titanium comes full equipped with everything you could need!"
+final_prize = "a brand new 2022 Ford Focus!"
 
 # final round, change if needed.
 final_round_text_loc = 'Data-Txt-Files/finalround.txt'

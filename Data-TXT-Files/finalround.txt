@@ -1,2 +1,9 @@
-Add your text here and use string.format or string.format_map
-with {variables} to template strings
+FINAL ROUND INSTRUCTIONS
+========================
+
+For the final round, there will be one word that hasn't been used yet.
+You are given the letters R, S, T, L, N, and E.
+You have to guess three consonants and one vowel then you have 5 seconds to guess the word.
+If you guess the word within the five seconds, you win {2}
+If you don't guess the word, you keep your winnings from the previous rounds totaling ${0}.
+{1}, let's play the final game.
